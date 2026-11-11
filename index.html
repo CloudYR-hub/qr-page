@@ -1,11 +1,99 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>QR test</title>
+
+    <!-- EDIT: tab title + description (description also shows in link previews) -->
+    <title>Our Page</title>
+    <meta name="description" content="A short description of this page." />
+
+    <!-- Link preview when the URL is shared in Messenger, WhatsApp, etc. -->
+    <meta property="og:title" content="Our Page" />
+    <meta
+      property="og:description"
+      content="A short description of this page."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Colors the phone's browser bar to match the page -->
+    <meta
+      name="theme-color"
+      content="#f6f1ea"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1c1a18"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Inline icon so the browser doesn't request a missing favicon.ico -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>"
+    />
+
+    <!-- Relative path (no leading slash) so it works under /qr-page/ on GitHub Pages -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>It works!</h1>
+    <main class="page">
+      <!-- ===== HEADER ===== -->
+      <header class="hero">
+        <p class="hero__eyebrow">Small label goes here</p>
+        <h1 class="hero__title">Main Title Goes Here</h1>
+        <p class="hero__subtitle">
+          A short subtitle or date —
+          <time datetime="2026-11-11">11 November 2026</time>
+        </p>
+      </header>
+
+      <!-- ===== SECTION 1 (copy a whole <section> block to add more) ===== -->
+      <section class="card" aria-labelledby="section-1">
+        <h2 class="card__title" id="section-1">First Section Heading</h2>
+        <p>
+          This is placeholder text. Replace it with your own paragraph. It can
+          be as long or as short as you like — the card grows to fit the text.
+        </p>
+        <p>
+          A second paragraph works the same way. Keep paragraphs fairly short so
+          they are comfortable to read on a phone screen.
+        </p>
+      </section>
+
+      <!-- ===== HIGHLIGHTED QUOTE (delete this block if not needed) ===== -->
+      <figure class="quote">
+        <blockquote>
+          <p>A short quote or a key sentence you want to stand out.</p>
+        </blockquote>
+        <figcaption>— Optional author</figcaption>
+      </figure>
+
+      <!-- ===== SECTION 2 ===== -->
+      <section class="card" aria-labelledby="section-2">
+        <h2 class="card__title" id="section-2">Second Section Heading</h2>
+        <p>Some intro text before a list:</p>
+        <ul class="list">
+          <li>First list item</li>
+          <li>Second list item</li>
+          <li>Third list item</li>
+        </ul>
+      </section>
+
+      <!-- ===== SECTION 3 ===== -->
+      <section class="card" aria-labelledby="section-3">
+        <h2 class="card__title" id="section-3">Third Section Heading</h2>
+        <p>
+          More placeholder text. Delete this section entirely if you only need
+          two, or copy it to add a fourth (give it a new id, e.g. section-4).
+        </p>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>Made with care by Name, Name &amp; Name</p>
+    </footer>
   </body>
 </html>
